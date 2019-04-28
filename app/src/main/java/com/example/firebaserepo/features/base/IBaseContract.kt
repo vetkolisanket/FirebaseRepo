@@ -11,7 +11,7 @@ interface IBaseContract {
 
         fun getContext(): Context
 
-        fun showMessage(type: String)
+        fun showMessage(message: String, type: String)
 
     }
 

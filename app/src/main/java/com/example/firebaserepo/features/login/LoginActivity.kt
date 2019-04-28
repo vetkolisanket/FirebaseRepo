@@ -3,10 +3,10 @@ package com.example.firebaserepo.features.login
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
 import com.example.firebaserepo.R
+import com.example.firebaserepo.features.base.BaseActivity
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 import java.util.*
 
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity(), ILoginContract.View {
 
     private val callbackManager = CallbackManager.Factory.create()!!
 
@@ -29,7 +29,6 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
 
         val EMAIL = "email"
         val PUBLIC_PROFILE = "public_profile"
@@ -59,5 +58,11 @@ class LoginActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         callbackManager.onActivityResult(requestCode, resultCode, data)
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    //Contract
+
+    override fun onLoginSuccess() {
+        toast("Successful Login!")
     }
 }

@@ -2,6 +2,7 @@ package com.example.firebaserepo
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.firebaserepo.features.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
