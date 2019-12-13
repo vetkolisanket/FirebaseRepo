@@ -5,4 +5,6 @@
 
     <string name="app_name">FirebaseRepo</string>
     <string name="login">Login</string>
+    <string name="ml_kit">ML Kit</string>
+    <string name="firestore">Firestore</string>
 </resources>
